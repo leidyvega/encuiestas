@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "intebien2": {
+      "hosting": {
+        "encuestaintebien": [
+          "encuestasintebien"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "intebien2"
+  }
+}

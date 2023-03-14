@@ -1,0 +1,248 @@
+<h1 class="text-center">Formulario de recolección de datos</h1>
+
+<div class="container">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="my-5">
+        <div class="form-group mb-3">
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre completo:</label>
+                <input type="text" id="nombreCompleto" formControlName="nombreCompleto" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="tipoDocumento">Tipo de documento:</label>
+                <select id="tipoDocumento" formControlName="tipoDocumento"  class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Cédula de ciudadanía">Ti </option>
+                    <option value="Tarjeta de identidad">CC</option>
+                    <option value="Cédula de extranjería">CE</option>
+                    <option value="Permiso Especial de Permanencia">PEP</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numeroDocumento">Número de documento:</label>
+                <input type="text" id="numeroDocumento" formControlName="numeroDocumento"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" formControlName="direccion" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="barrio">Barrio:</label>
+                <input type="text" id="barrio" formControlName="barrio" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular:</label>
+                <input type="text" id="celular" formControlName="celular" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" formControlName="correo"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="seguroSocial">Seguro social:</label>
+                <select id="seguroSocial" formControlName="seguroSocial" required class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Sí">Subsidiada</option>
+                    <option value="No">contributiva </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numeroPersonasHogar">Número de personas en el hogar:</label>
+                <input type="number" id="numeroPersonasHogar" formControlName="numeroPersonasHogar" required
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="numeroMayoresEdad">Número de personas mayores de edad:</label>
+                <input type="number" id="numeroMayoresEdad" formControlName="numeroMayoresEdad" required
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="numeroMenoresEdad">Número de personas menores de edad:</label>
+                <input type="number" id="numeroMenoresEdad" formControlName="numeroMenoresEdad" required
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="numeroFormacionDeportiva">N° de integrantes interesados en la escuela de formación deportiva
+                    :</label>
+                <input type="number" id="numeroFormacionDeportiva" formControlName="numeroFormacionDeportiva" 
+                    class="form-control">
+            </div>
+
+            <!-- nuevos campos-->
+            <div class="form-group">
+                <label for="nombreIntegra1">Integrante N° 1 nombre y apellido :</label>
+                <input type="text" id="nombreIntegra1" formControlName="nombreIntegra1"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EdadIntegrante1">Integrante N° 1 (Edad):</label>
+                <input type="number" id="EdadIntegrante1" formControlName="EdadIntegrante1" 
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EscolarizadoIntegra1">¿Se encuentra escolarizado? Integrante N°1:</label>
+                <select id="EscolarizadoIntegra1" formControlName="EscolarizadoIntegra1"  class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Sí">Si</option>
+                    <option value="No">No </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Integrante1Disciplina">Integrante N°1 (Disciplina a inscribirse)</label>
+                <select id="Integrante1Disciplina" formControlName="Integrante1Disciplina" 
+                    class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Futbol">Futbol</option>
+                    <option value="Futsal">Futsal</option>
+                    <option value="Beisbol">Beisbol</option>
+                    <option value="Básquetbol">Básquetbol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Rugby">Rugby</option>
+                    <option value="Voleibol">Voleibol</option>
+                </select>
+            </div>
+             <!-- nuevos campos 2-->
+            <div class="form-group">
+                <label for="nombreIntegra1">Integrante N° 2 nombre y apellido :</label>
+                <input type="text" id="nombreIntegra2" formControlName="nombreIntegra2"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EdadIntegrante2">Integrante N° 2 (Edad):</label>
+                <input type="number" id="EdadIntegrante2" formControlName="EdadIntegrante2" 
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EscolarizadoIntegra2">¿Se encuentra escolarizado? Integrante N°2:</label>
+                <select id="EscolarizadoIntegra2" formControlName="EscolarizadoIntegra2"  class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Sí">Si</option>
+                    <option value="No">No </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Integrante2Disciplina">Integrante N°2 (Disciplina a inscribirse)</label>
+                <select id="Integrante2Disciplina" formControlName="Integrante2Disciplina" 
+                    class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Futbol">Futbol</option>
+                    <option value="Futsal">Futsal</option>
+                    <option value="Beisbol">Beisbol</option>
+                    <option value="Básquetbol">Básquetbol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Rugby">Rugby</option>
+                    <option value="Voleibol">Voleibol</option>
+                </select>
+            </div>
+
+            <!-- nuevos campos 3-->
+            <div class="form-group">
+                <label for="nombreIntegra1">Integrante N° 3 nombre y apellido :</label>
+                <input type="text" id="nombreIntegra3" formControlName="nombreIntegra3"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EdadIntegrante2">Integrante N° 3 (Edad):</label>
+                <input type="number" id="EdadIntegrante3" formControlName="EdadIntegrante3" 
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EscolarizadoIntegra2">¿Se encuentra escolarizado? Integrante N°3:</label>
+                <select id="EscolarizadoIntegra2" formControlName="EscolarizadoIntegra3"  class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Sí">Si</option>
+                    <option value="No">No </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Integrante2Disciplina">Integrante N°3 (Disciplina a inscribirse)</label>
+                <select id="Integrante2Disciplina" formControlName="Integrante3Disciplina" 
+                    class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Futbol">Futbol</option>
+                    <option value="Futsal">Futsal</option>
+                    <option value="Beisbol">Beisbol</option>
+                    <option value="Básquetbol">Básquetbol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Rugby">Rugby</option>
+                    <option value="Voleibol">Voleibol</option>
+                </select>
+            </div>
+            <!-- nuevos campos 4-->
+            <div class="form-group">
+                <label for="nombreIntegra1">Integrante N° 4 nombre y apellido :</label>
+                <input type="text" id="nombreIntegra4" formControlName="nombreIntegra4"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EdadIntegrante2">Integrante N° 4 (Edad):</label>
+                <input type="number" id="EdadIntegrante4" formControlName="EdadIntegrante4" 
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="EscolarizadoIntegra4">¿Se encuentra escolarizado? Integrante N°4:</label>
+                <select id="EscolarizadoIntegra4" formControlName="EscolarizadoIntegra4"  class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Sí">Si</option>
+                    <option value="No">No </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Integrante2Disciplina">Integrante N°4 (Disciplina a inscribirse)</label>
+                <select id="Integrante2Disciplina" formControlName="Integrante4Disciplina" 
+                    class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Futbol">Futbol</option>
+                    <option value="Futsal">Futsal</option>
+                    <option value="Beisbol">Beisbol</option>
+                    <option value="Básquetbol">Básquetbol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Rugby">Rugby</option>
+                    <option value="Voleibol">Voleibol</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="IntegrantesAdicionales">Integrantes adicionales :</label>
+                <input type="number" id="nombreIntegra2" formControlName="nombreIntegra2"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ProblemaBarrio">¿Cuál considera usted que sea el problema que más aqueja en su
+                    barrio?</label>
+                <select id="ProblemaBarrio" formControlName="ProblemaBarrio" required class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Falta de un CAI">Falta de un CAI</option>
+                    <option value="Falta de colegios ">Falta de colegios</option>
+                    <option value="Falta de alcantarillado ">Falta de alcantarillado </option>
+                    <option value="Pavimentación">Pavimentación</option>
+                    <option value="Otro ">Otro </option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="OtroProBarrio">Otro:</label>
+                <input type="text" id="OtroProBarrio" formControlName="OtroProBarrio" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ProblemaSoledad">¿Cuál considera usted que es el mayor problema que tiene el municipio de
+                    Soledad?</label>
+                <select id="ProblemaSoledad" formControlName="ProblemaSoledad" required class="form-control">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Salud ">Salud </option>
+                    <option value="Educación ">Educación </option>
+                    <option value="Malla vial ">Malla vial</option>
+                    <option value="Inseguridad ">Inseguridad </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="InformadoCampañas">Le interesaría estar informado (a) de las campañas de la fundación para
+                    su comunidad de Zoonosis, vacunación animal, esterilización, proyectos de emprendimiento y deporte.
+                    • Enviar datos
+                </label>
+                <select id="InformadoCampañas" formControlName="InformadoCampañas" required class="InformadoCampañas">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Salud ">Si </option>
+                    <option value="Educación ">No</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+
+    </form>
+</div>
